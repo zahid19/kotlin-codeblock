@@ -1,0 +1,36 @@
+///////////////////////////////////////////////////////////
+// 01.  Main method with println
+///////////////////////////////////////////////////////////
+fun main() {
+    println( "Welcome to Android Kotlin" )
+}
+
+
+///////////////////////////////////////////////////////////
+// 02. ArrayList ( Add item, read all items
+///////////////////////////////////////////////////////////
+
+fun main() {
+
+    var studentArray = ArrayList<StudentModel>()
+
+    var student1 = StudentModel("hasan",21)
+    var student2 = StudentModel("belal",19)
+    var student3 = StudentModel("rafiq",25)
+
+    studentArray.add(student1)
+    studentArray.add(student2)
+    studentArray.add(student3)
+
+    for(student in studentArray)
+    {
+        println("Name:" + student.name + " , Age:" + student.age)
+    }
+        
+}
+
+
+///////////////////////////////////////////////////////////
+// 03. Class with 2 fields
+///////////////////////////////////////////////////////////
+data class StudentModel(val name:String , val age:Int)
